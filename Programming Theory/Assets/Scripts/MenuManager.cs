@@ -11,6 +11,7 @@ public class MenuManager : MainManager
         }
     }
 
+// POLYMORPHISM
     public override void ButtonClicked(){
         Debug.Log("Button was clicked using MenuManager");
     }

@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements.Experimental;
 
+// INHERITANCE
 public class GameManager : MainManager
 {
     [SerializeField] GameObject cube;
 
+// ENCAPSULATION
     private int numberOfCubes_backingFeild;
     public int NumberOfCubes{
         get{return numberOfCubes_backingFeild;}
@@ -27,6 +29,8 @@ public class GameManager : MainManager
         }
     }
 
+// ABSTRACTION
+// POLYMORPHISM
     public void ButtonClicked(Slider slider){
         SetNumberOfCubes((int)slider.value);
         StartCoroutine(SpawnCube());

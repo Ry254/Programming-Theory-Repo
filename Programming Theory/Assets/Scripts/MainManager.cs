@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainManager : MonoBehaviour
 {
     [SerializeField] protected GameObject mainManager;
+// ENCAPSULATION
     public static MainManager Instance {get; private set;}
 
     private void Awake()
@@ -24,15 +25,18 @@ public class MainManager : MonoBehaviour
         Debug.Log("Button was clicked");
     }
 
+// ABSTRACTION
     public void ChangeScene(int sceneIndex){
         SceneManager.LoadScene(sceneIndex);
     }
 
+// ABSTRACTION
     public void NextScene(){
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
+// ABSTRACTION
     public void PreviousScene(){
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex - 1);
